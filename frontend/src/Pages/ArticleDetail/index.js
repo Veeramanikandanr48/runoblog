@@ -45,8 +45,8 @@ const ArticleDetail = () => {
       />{" "}
       {/* Adjust the height here */}
       <div className="container mt-5 d-flex justify-content-around">
-        <p className="mb-3 d-none d-md-block">{article.date}</p>
-        <div className="w-75">
+        <p className="article-date d-none d-md-block">{article.date}</p>
+        <div className="article-w">
           <div className="quill-editor">
             <ReactQuill
               value={article.content}
