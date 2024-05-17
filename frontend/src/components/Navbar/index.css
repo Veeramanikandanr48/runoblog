@@ -1,0 +1,11 @@
+.brand-text {
+    font-family: 'Spartan', sans-serif;
+  }
+  
+  .nav-item-text {
+    font-family: 'Roboto', sans-serif;
+  }
+  .navbar-custom {
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust alpha value to change opacity */
+  }
+  

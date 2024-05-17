@@ -1,0 +1,47 @@
+
+  
+  .container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .quill-editor {
+    border: none;
+  }
+  
+  .ql-editor {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .ql-toolbar {
+    display: none;
+  }
+  /* styles.css */
+.quill-editor .ql-container {
+  border: none !important;
+}
+.quote {
+  font-size: 3rem;
+  font-weight: 700;
+  color: orange;
+}
+
+@media (max-width: 768px) {
+  .quote {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .quote {
+    font-size: 1.5rem;
+  }
+}
+

@@ -1,0 +1,25 @@
+.image-section {
+    background-image: url('../../assets//Image\ \(1\).jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    padding: 50px 20px; /* Adjust padding as needed */
+    text-align: center;
+    color: #fff; /* Text color */
+  }
+  
+  .image-text {
+    max-width: 800px; /* Adjust maximum width as needed */
+    margin: 0 auto;
+  }
+  
+  .image-text h2 {
+    font-size: 32px; /* Adjust font size as needed */
+    margin-bottom: 20px;
+  }
+  
+  .image-text p {
+    font-size: 18px; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height as needed */
+  }
+  
