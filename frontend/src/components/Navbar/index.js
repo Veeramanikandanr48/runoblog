@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top navbar-custom p-3">
       <div className="container">
-        <a className="navbar-brand brand-text font-weight-bold text-white" href="#">Runo</a>
+        <a className="navbar-brand brand-text font-weight-bold text-white" href="/">Runo</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -33,34 +33,34 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link nav-item-text text-white" href="#">Home</a>
+              <a className="nav-link nav-item-text text-white" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link nav-item-text text-white" href="#">About</a>
+              <a className="nav-link nav-item-text text-white" href="/about">About</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link nav-item-text text-white" href="#">Article</a>
+              <a className="nav-link nav-item-text text-white" href="/article">Article</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link nav-item-text text-white" href="#">Contact Us</a>
+              <a className="nav-link nav-item-text text-white" href="/contact">Contact Us</a>
             </li>
             <li className="nav-item d-none d-sm-block">
-              <a className="nav-link" href="#"><FaFacebook className="text-white" /></a>
+              <a className="nav-link" href="/"><FaFacebook className="text-white" /></a>
             </li>
             <li className="nav-item d-none d-sm-block">
-              <a className="nav-link" href="#"><FaTwitter className="text-white" /></a>
+              <a className="nav-link" href="/"><FaTwitter className="text-white" /></a>
             </li>
             <li className="nav-item d-none d-sm-block">
-              <a className="nav-link" href="#"><FaYoutube className="text-white" /></a>
+              <a className="nav-link" href="/"><FaYoutube className="text-white" /></a>
             </li>
             <li className="nav-item d-none d-sm-block">
-              <a className="nav-link" href="#"><FaPinterest className="text-white" /></a>
+              <a className="nav-link" href="/"><FaPinterest className="text-white" /></a>
             </li>
             <li className="nav-item d-none d-sm-block">
-              <a className="nav-link" href="#"><FaBehance className="text-white" /></a>
+              <a className="nav-link" href="/"><FaBehance className="text-white" /></a>
             </li>
             <li className="nav-item d-none d-sm-block">
-              <a className="nav-link" href="#" onClick={toggleSearch}><FaSearch className="text-white" /></a>
+              <a className="nav-link" href="/" onClick={toggleSearch}><FaSearch className="text-white" /></a>
             </li>
           </ul>
           {searchVisible && (
