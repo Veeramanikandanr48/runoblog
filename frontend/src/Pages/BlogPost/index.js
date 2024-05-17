@@ -35,7 +35,7 @@ const BlogForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/blogs', formData);
+      const response = await axios.post('https://runoblog.onrender.com/blogs', formData);
       console.log('Blog saved:', response.data);
     } catch (error) {
       console.error('Error saving blog:', error);

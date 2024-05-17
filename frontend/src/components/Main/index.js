@@ -9,7 +9,7 @@ const Main = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch("http://localhost:8000/blogs");
+        const response = await fetch("https://runoblog.onrender.com/blogs");
         const data = await response.json();
         setArticles(data);
       } catch (error) {
