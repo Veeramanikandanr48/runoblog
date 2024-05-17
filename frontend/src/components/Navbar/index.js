@@ -25,7 +25,9 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top navbar-custom p-3">
       <div className="container">
-        <a className="navbar-brand brand-text font-weight-bold text-white" href="/">Runo</a>
+        <div className='logo-container'>
+        <a className="navbar-brand brand-text font-weight-bold text-white" id="page-logo" href="/">Healthy Bonding
+</a></div>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>

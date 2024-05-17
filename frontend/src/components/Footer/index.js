@@ -66,7 +66,8 @@ const Footer = () => {
 
       <div className="bottom-section py-3 bg-secondary">
         <div className="container d-flex justify-content-between">
-          <p className="mb-0 fs-6">2021 | RUNO Publisher Studio</p>
+          <p className="mb-0 fs-6">2021 | Healthy Bonding
+ Publisher Studio</p>
           <p className="mb-0 fw-bold">Subscribe Now</p>
         </div>
       </div>

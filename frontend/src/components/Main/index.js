@@ -32,7 +32,7 @@ const Main = () => {
   return (
     <>
       <h1 className="topics">Popular topics</h1>
-      <ul className="categories">
+      <ul className="categories d-none">
         <li
           className={activeCategory === "All" ? "active" : ""}
           onClick={() => handleCategoryClick("All")}

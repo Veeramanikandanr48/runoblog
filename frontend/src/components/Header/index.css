@@ -31,7 +31,19 @@
   .carousel-item img {
     height: 50vh;
   }
-
+  .header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+  .text-para{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 0px;
+  }
   .carousel-text-container {
     width: 100%;
     padding: 20px;
@@ -54,3 +66,4 @@
     padding: 50px;
   }
 }
+
