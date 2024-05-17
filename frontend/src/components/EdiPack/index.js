@@ -1,32 +1,42 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom for routing
+import { Link } from 'react-router-dom';
+import { TailSpin } from "react-loader-spinner";
 import './index.css';
 
 const EdiPack = () => {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("All");
 
   useEffect(() => {
-    // Fetch recent articles when the component mounts
     async function fetchArticles() {
       try {
-        const response = await axios.get('https://runoblog.onrender.com/blogs'); // Replace URL with your API endpoint
-        setArticles(response.data.slice(0, 3)); // Assuming you want to display the recent three articles
+        const response = await axios.get('https://runoblog.onrender.com/blogs');
+        setArticles(response.data.slice(0, 3));
+        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error('Error fetching articles:', error);
       }
     }
 
     fetchArticles();
-  }, []); // Empty dependency array ensures this effect runs only once when the component mounts
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="loader-container min-vh-20 d-flex justify-content-center align-items-center">
+        <TailSpin color="#00BFFF" height={80} width={80} />
+      </div>
+    );
+  }
 
   const filteredArticles =
     activeCategory === "All"
       ? articles
       : articles.filter((article) => article.type === activeCategory);
 
-  return  (
+  return (
     <>
       <section className="editor’s">
         <div className="container">
@@ -37,7 +47,7 @@ const EdiPack = () => {
                 <Link
                   to={`/article/${article._id}`}
                   className="card-link"
-                  style={{ textDecoration: 'none', color: 'inherit' }} // Remove underline and default color
+                  style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   <div className="card mb-4 shadow-sm border-0">
                     <img className="card-img-top" src={article.imageURL} alt={article.title}/>

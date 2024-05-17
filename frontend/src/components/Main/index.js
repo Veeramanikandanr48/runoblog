@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { TailSpin } from "react-loader-spinner";
 import "./RelatedTopic.css";
 
 const Main = () => {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("All");
 
   useEffect(() => {
@@ -12,6 +14,7 @@ const Main = () => {
         const response = await fetch("https://runoblog.onrender.com/blogs");
         const data = await response.json();
         setArticles(data);
+        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error("Error fetching articles:", error);
       }
@@ -32,6 +35,11 @@ const Main = () => {
   return (
     <>
       <h1 className="topics">Popular topics</h1>
+      {loading && (
+        <div className="loader-container min-vh-20 d-flex justify-content-center align-items-center">
+          <TailSpin color="#00BFFF" height={80} width={80} />
+        </div>
+      )}
       <ul className="categories d-none">
         <li
           className={activeCategory === "All" ? "active" : ""}

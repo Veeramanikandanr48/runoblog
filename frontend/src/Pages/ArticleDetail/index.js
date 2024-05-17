@@ -4,11 +4,13 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import Navbar from "../../components/Navbar";
 import Footer, { SocialMedia } from "../../components/Footer";
+import { TailSpin } from "react-loader-spinner";
 import "./index.css"; // Import the CSS file
 
 const ArticleDetail = () => {
   const { id } = useParams();
   const [article, setArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchArticle = async () => {
@@ -16,6 +18,7 @@ const ArticleDetail = () => {
         const response = await fetch(`https://runoblog.onrender.com/blogs/${id}`);
         const data = await response.json();
         setArticle(data);
+        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error("Error fetching article:", error);
       }
@@ -24,8 +27,12 @@ const ArticleDetail = () => {
     fetchArticle();
   }, [id]);
 
-  if (!article) {
-    return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="loader-container min-vh-100 d-flex justify-content-center align-items-center">
+    <TailSpin color="#00BFFF" height={80} width={80} />
+  </div>
+    );
   }
 
   return (
@@ -57,23 +64,24 @@ const ArticleDetail = () => {
           <div>
             <hr />
             <div className="d-flex justify-content-between mb-5">
-            <div className="justify-content-start align-items-cente">
+              <div className="justify-content-start align-items-cente">
                 <div className="d-flex justify-content-start align-items-center">
                   <img
                     src={article.profileImageURL}
                     alt="Profile"
                     className="profile-image m-3"
                   />
-                    <p className="mb-0 fw-bold">By {article.name}</p>
+                  <p className="mb-0 fw-bold">By {article.name}</p>
                 </div>
               </div>
-            <div className="p-3">
-              <SocialMedia/>
-            </div></div>
+              <div className="p-3">
+                <SocialMedia />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
