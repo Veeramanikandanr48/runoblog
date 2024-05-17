@@ -22,9 +22,9 @@ const Header = () => {
                 <h1 className="header-title">Richard Norton Photorealistic Rendering</h1>
                 <div className="text-container">
                   
-                  <div className='d-flex'>
-                    <p className='d-none d-md-block p-2'>08.08.2021</p>
-                    <p className='w-75 text-para'>Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                  <div className='d-flex d-none d-md-block'>
+                    <p className='p-2'>08.08.2021</p>
+                    <p className='w-75'>Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
                   </div>
                 </div>
               </div>
