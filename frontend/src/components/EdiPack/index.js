@@ -35,7 +35,7 @@ const EdiPack = () => {
             {filteredArticles.map((article) => (
               <div key={article.id} className="col-md-4">
                 <Link
-                  to={`/article/${article.id}`}
+                  to={`/article/${article._id}`}
                   className="card-link"
                   style={{ textDecoration: 'none', color: 'inherit' }} // Remove underline and default color
                 >
