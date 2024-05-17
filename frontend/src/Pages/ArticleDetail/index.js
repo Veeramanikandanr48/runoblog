@@ -13,7 +13,7 @@ const ArticleDetail = () => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/blogs/${id}`);
+        const response = await fetch(`https://runoblog.onrender.com/blogs/${id}`);
         const data = await response.json();
         setArticle(data);
       } catch (error) {
