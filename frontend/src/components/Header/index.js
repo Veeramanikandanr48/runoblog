@@ -1,11 +1,13 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap'; // Import Carousel from react-bootstrap
-import image1 from '../../assets/banner1.png';
+import image1 from '../../assets/banner1.jpg';
 import image2 from '../../assets/banner2.jpg';
-import image3 from '../../assets/banner3.png';
+import image3 from '../../assets/banner3.jpg';
+import image4 from '../../assets/banner4.jpg';
+import image5 from '../../assets/banner5.jpg';
 import './index.css';
 
-const images = [image1, image2, image3]; // Import your image assets
+const images = [image1, image2, image3, image4, image5]; // Import your image assets
 
 const Header = () => {
   return (
