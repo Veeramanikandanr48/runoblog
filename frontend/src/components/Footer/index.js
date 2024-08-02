@@ -39,7 +39,6 @@ const Footer = () => {
           <div className="col-md-3">
             <h2 className="fw-bold mb-4">Contact the Publisher</h2>
             <p className="mb-2">mike@runo.com</p>
-            <p className="mb-2">mike@runo.com</p>
             <p>+944 450 904 505</p>
           </div>
 
@@ -54,7 +53,9 @@ const Footer = () => {
 
           <div className="col-md-3">
             <h2 className="fw-bold mb-4">Headquarter</h2>
-            <p className="mb-0">191 Middleville Road, NY 1001, Sydney Australia</p>
+            <p className="mb-0">
+              191 Middleville Road, NY 1001, Sydney Australia
+            </p>
           </div>
 
           <div className="col-md-3">
@@ -66,8 +67,7 @@ const Footer = () => {
 
       <div className="bottom-section py-3 bg-secondary">
         <div className="container d-flex justify-content-between">
-          <p className="mb-0 fs-6">2021 | Healthy Bonding
- Publisher Studio</p>
+          <p className="mb-0 fs-6">2021 | Healthy Bonding Publisher Studio</p>
           <p className="mb-0 fw-bold">Subscribe Now</p>
         </div>
       </div>

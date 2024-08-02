@@ -1,11 +1,11 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap'; // Import Carousel from react-bootstrap
-import image1 from '../../assets/banner1.jpg';
-import image2 from '../../assets/banner2.jpg';
-import image3 from '../../assets/banner3.jpg';
-import image4 from '../../assets/banner4.jpg';
-import image5 from '../../assets/banner5.jpg';
-import './index.css';
+import React from "react";
+import { Carousel } from "react-bootstrap"; // Import Carousel from react-bootstrap
+import image1 from "../../assets/banner1.jpg";
+import image2 from "../../assets/banner2.jpg";
+import image3 from "../../assets/banner3.jpg";
+import image4 from "../../assets/banner4.jpg";
+import image5 from "../../assets/banner5.jpg";
+import "./index.css";
 
 const images = [image1, image2, image3, image4, image5]; // Import your image assets
 
@@ -15,9 +15,13 @@ const Header = () => {
       <Carousel controls={false}>
         {images.map((image, idx) => (
           <Carousel.Item key={idx}>
-            <img className="d-block w-100" src={image} alt={`Slide ${idx + 1}`} />
+            <img
+              className="d-block w-100"
+              src={image}
+              alt={`Slide ${idx + 1}`}
+            />
             <div className="carousel-text-container">
-              <div className="carousel-text">
+              {/* <div className="carousel-text">
                 <div>
                   <p className="catbutton d-none d-md-block">ADVENTURE</p>
                 </div>
@@ -29,7 +33,7 @@ const Header = () => {
                     <p className='w-75'>Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </Carousel.Item>
         ))}
